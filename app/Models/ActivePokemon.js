@@ -1,3 +1,4 @@
+import { ProxyState } from "../AppState.js"
 
 
 export class ActivePokemon {
@@ -7,7 +8,8 @@ export class ActivePokemon {
     this.height = data.height
     this.weight = data.weight
         try {
-      this.types = data.types.type.name || data.types
+      this.type0 = data.types[0].type.name
+      this.type1 = data.types[1].type.name
     } catch (error) {
       this.types = 'Pokedex data corrupted...'
     }
@@ -27,9 +29,10 @@ export class ActivePokemon {
               <img class="img-fluid shake" src="${this.img}" alt="">
               <p class="mb-0 pb-0"><b>Height:</b> <span> ${this.height} <small> Decimetres</small></span></p>
               <p class="mb-0 pb-0"><b>Weight:</b><span></span> ${this.weight} <small> Hectograms</small></p>
-              <p class="mb-0 pb-0"><b>Type(s):</b> <span> ${this.types}</span></p>
+              <p class="mb-0 pb-0"><b>Type(s):</b> <span> ${this.type0} | ${this.type1 ? this.type1 : ''}</span></p>
               </div>
     
     `
+
   }
 }
