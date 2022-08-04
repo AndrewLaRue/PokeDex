@@ -1,0 +1,97 @@
+/* BASIC STYLES HERE */
+
+body {
+  max-height: 100vh;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.left-bar {
+  overflow-y: scroll;
+  background-color: transparent !important;
+  /* max-width: 25vw !important; */
+  border: 0ch;
+}
+
+*::first-letter {
+  text-transform: capitalize;
+}
+
+* {
+  font-family: 'Miltonian';
+}
+
+.hero-img {
+  background-image: url(https://external-preview.redd.it/XfZ2BCWg9MHnXnCjXQtQtLGmq6KfcKYcuX3PpR3qHwc.jpg?auto=webp&s=a20131055a8a966bf7c9921a83e6ae4d72275115);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(75%);
+  min-height: 88vh;
+}
+
+.ball-img {
+  background-image: url(https://preview.redd.it/79it2lf6mcq61.jpg?width=640&crop=smart&auto=webp&s=ca098ab23f5f14f8fd3f22f3236903b0ee2e5195);
+  background-position: center;
+  background-size: cover;
+  max-height: 44vh;
+}
+
+/* .img-size {
+
+} */
+
+
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  filter: brightness(80%);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
